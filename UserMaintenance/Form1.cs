@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,17 @@ namespace UserMaintenance
 
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter sr = new StreamWriter(users, Encoding.Default))
+            {
+                users.Write(ID);
+                users.Write(FullName);
+                sr.WriteLine();
+
+            }
         }
     }
 }
