@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,7 @@ namespace GyaK_07
         PortfolioEntities context = new PortfolioEntities();
         List<Tick> Ticks;
         List<PortfolioItem> Portfolio = new List<PortfolioItem>();
+
 
         public Form1()
         {
@@ -72,7 +75,29 @@ namespace GyaK_07
             return value;
         }
 
+        private void SaveFileBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog mentes = new SaveFileDialog();
+            mentes.InitialDirectory = Application.StartupPath;
 
+            if (mentes.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter kiiras = new StreamWriter(mentes.FileName, false, Encoding.UTF8);
+                kiiras.WriteLine("Időszak;Nyereség");
+                foreach (var sor in Portfolio)
+                {
+                    try
+                    {
+                        kiiras.WriteLine(sor.Index + ";" + sor.Volume);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex.Message);
+                        throw;
+                    }
+                }
 
+            }
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace GyaK_07
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.SaveFileBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tickBindingSource)).BeginInit();
@@ -115,11 +116,22 @@ namespace GyaK_07
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 1;
             // 
+            // SaveFileBtn
+            // 
+            this.SaveFileBtn.Location = new System.Drawing.Point(522, 251);
+            this.SaveFileBtn.Name = "SaveFileBtn";
+            this.SaveFileBtn.Size = new System.Drawing.Size(133, 53);
+            this.SaveFileBtn.TabIndex = 2;
+            this.SaveFileBtn.Text = "Mentés";
+            this.SaveFileBtn.UseVisualStyleBackColor = true;
+            this.SaveFileBtn.Click += new System.EventHandler(this.SaveFileBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SaveFileBtn);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -145,6 +157,7 @@ namespace GyaK_07
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button SaveFileBtn;
     }
 }
 
