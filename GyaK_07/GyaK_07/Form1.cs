@@ -96,7 +96,7 @@ namespace GyaK_07
                         throw;
                     }
                 }
-
+                kiiras.Close();
             }
         }
     }
