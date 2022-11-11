@@ -59,7 +59,7 @@ namespace GyaK_07
             this.dataGridView1.DataSource = this.tickBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(341, 438);
             this.dataGridView1.TabIndex = 0;
             // 
             // portfolioDataSet
@@ -110,7 +110,7 @@ namespace GyaK_07
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(264, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(462, 12);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 1;
