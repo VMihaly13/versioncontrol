@@ -17,11 +17,29 @@ namespace UnitTestExample.Test
             TestCase("irf.uni-corvinus", false),
             TestCase("irf@uni-corvinus.hu", true)
         ]
+
         public void TestValidateEmail(string email, bool expectedResult)
         {
             var accountController = new AccountController();
 
             var actualResult = accountController.ValidateEmail(email);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [
+            Test,
+            TestCase("Abcdabcd", false),
+            TestCase("ABCABC123", false),
+            TestCase("asdasd123", false),
+            TestCase("Asd123", false),
+            TestCase("Abcd1234", true)
+            
+         ]
+       public  void TestValidatePassword(string password, bool expectedResult)
+        {
+            var accountController = new AccountController();
+
+            var actualResult = accountController.ValidatePassword(password);
 
             Assert.AreEqual(expectedResult, actualResult);
         }
