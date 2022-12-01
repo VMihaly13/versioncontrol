@@ -101,7 +101,7 @@ namespace Microsimulation
                     {
                         Age = int.Parse(line[0]),
                         NbrOfChildren = int.Parse(line[1]),
-                        Probability= double.Parse(line[2]) 
+                        P= double.Parse(line[2]) 
                     });
                 }
             }
@@ -121,7 +121,7 @@ namespace Microsimulation
                     {
                         Gender = (Gender)Enum.Parse(typeof(Gender), line[0]),
                         Age = int.Parse(line[1]),
-                        DthProbability = double.Parse(line[2])
+                        P = double.Parse(line[2])
                     });
                 }
             }
