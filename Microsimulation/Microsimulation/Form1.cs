@@ -49,7 +49,7 @@ namespace Microsimulation
         }
 
         private void SimStep(int year, Person person)
-         {
+        {
             if (!person.IsAlive) return;
 
             byte age = (byte)(year - person.BirthYear);
@@ -75,6 +75,7 @@ namespace Microsimulation
                 }
             }
         }
+
         public List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
