@@ -135,5 +135,10 @@ namespace Microsimulation
 
             return population;
         }
+
+        private void BrowseBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+        }
     }
 }
