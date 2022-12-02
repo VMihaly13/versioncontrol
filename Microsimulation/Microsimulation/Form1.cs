@@ -24,7 +24,12 @@ namespace Microsimulation
             Population = GetPopulation(@"C:\Temp\nép.csv");
             BirthProbabilities = GetBirthProbabilities(@"C:\Temp\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
+            Simulation();
+            
+        }
 
+        private void Simulation()
+        {
             for (int year = 2005; year <= 2024; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
@@ -44,7 +49,7 @@ namespace Microsimulation
         }
 
         private void SimStep(int year, Person person)
-        {
+         {
             if (!person.IsAlive) return;
 
             byte age = (byte)(year - person.BirthYear);
